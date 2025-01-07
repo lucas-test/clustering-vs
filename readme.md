@@ -3,19 +3,17 @@
 We implement two new algorithms:
 
 - 2CCEDVS for 2-Club Cluster Edge Deletion with Vertex Splitting on a graph
-- 2CCED for 2-Clib Cluster Edge Deletion on a graph
+- 2CCED for 2-Club Cluster Edge Deletion on a graph
 
 We compare these algorithms on the following real data:
 
-- CE GN
-- CE GT
-- CE HT
-- CE LC
-- DM HT
+- CE GN [https://networkrepository.com/bio-CE-GN.php]
+- CE GT [https://networkrepository.com/bio-CE-GT.php]
+- CE HT [https://networkrepository.com/bio-CE-HT.php]
+- CE LC [https://networkrepository.com/bio-CE-LC.php]
+- DM HT [https://networkrepository.com/bio-DM-HT.php]
 
 We compare our new algorithms with the following existing algorithms:
-
-- OCluster
 
 - MCL [https://github.com/micans/mcl]
 
@@ -26,7 +24,7 @@ We compare our new algorithms with the following existing algorithms:
 
 ## Installation
 
-Install networkx:
+Install networkx (with pip or with apt):
 
     pip install networkx
 
