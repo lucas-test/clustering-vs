@@ -5,7 +5,6 @@ import src.algo_2CCEDVS as algo_2CCEDVS
 import src.utils as utils
 import time
 import src.algo_mcl as algo_MCL
-import src.algo_ocluster as algo_OCR
 import src.algo_cluster_one as algo_CL1
 import src.algo_KPCE as algo_KPCE
 import src.algo_2CCED as algo_2CCED
@@ -26,15 +25,6 @@ print("n=", G.number_of_nodes(), "m=",  G.number_of_edges())
 print("Algo\tTime(s)\tClust\tOverl.\tAvgDensity")
 
 
-# OClustR
-start_time = time.time()
-assignation, clusters = algo_OCR.solve(G, file_name, {})
-write_clusters_to_file(clusters, f"real/{base}-OCR.clusters")
-end_time = time.time()
-q = compute_qualities(G, assignation, clusters)
-q.insert(0, end_time - start_time)
-q.insert(0, "OCR")
-print("\t".join(map(lambda x: f"{x}" if isinstance(x, int) else ( f"{float(x):.3f}" if isinstance(x, float) else f"{x}")  , q)))
 
 
 # KaPoCE
